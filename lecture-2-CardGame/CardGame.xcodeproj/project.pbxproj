@@ -1,0 +1,266 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A893CFAE1C7E693A00CEE67F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A893CFAD1C7E693A00CEE67F /* main.m */; };
+		A893CFB61C7E696800CEE67F /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = A893CFB51C7E696800CEE67F /* Card.m */; settings = {ASSET_TAGS = (); }; };
+		A893CFB91C7E7F1F00CEE67F /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = A893CFB81C7E7F1F00CEE67F /* Deck.m */; settings = {ASSET_TAGS = (); }; };
+		A893CFBC1C7E83E200CEE67F /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = A893CFBB1C7E83E200CEE67F /* PlayingCard.m */; settings = {ASSET_TAGS = (); }; };
+		A893CFBF1C7E91AF00CEE67F /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = A893CFBE1C7E91AF00CEE67F /* PlayingCardDeck.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A893CFA81C7E693A00CEE67F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A893CFAA1C7E693A00CEE67F /* CardGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CardGame; sourceTree = BUILT_PRODUCTS_DIR; };
+		A893CFAD1C7E693A00CEE67F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A893CFB41C7E696800CEE67F /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		A893CFB51C7E696800CEE67F /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		A893CFB71C7E7F1F00CEE67F /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		A893CFB81C7E7F1F00CEE67F /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		A893CFBA1C7E83E200CEE67F /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCard.h; sourceTree = "<group>"; };
+		A893CFBB1C7E83E200CEE67F /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
+		A893CFBD1C7E91AF00CEE67F /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
+		A893CFBE1C7E91AF00CEE67F /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A893CFA71C7E693A00CEE67F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A893CFA11C7E693A00CEE67F = {
+			isa = PBXGroup;
+			children = (
+				A893CFAC1C7E693A00CEE67F /* CardGame */,
+				A893CFAB1C7E693A00CEE67F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A893CFAB1C7E693A00CEE67F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A893CFAA1C7E693A00CEE67F /* CardGame */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A893CFAC1C7E693A00CEE67F /* CardGame */ = {
+			isa = PBXGroup;
+			children = (
+				A893CFAD1C7E693A00CEE67F /* main.m */,
+				A893CFB41C7E696800CEE67F /* Card.h */,
+				A893CFB51C7E696800CEE67F /* Card.m */,
+				A893CFB71C7E7F1F00CEE67F /* Deck.h */,
+				A893CFB81C7E7F1F00CEE67F /* Deck.m */,
+				A893CFBA1C7E83E200CEE67F /* PlayingCard.h */,
+				A893CFBB1C7E83E200CEE67F /* PlayingCard.m */,
+				A893CFBD1C7E91AF00CEE67F /* PlayingCardDeck.h */,
+				A893CFBE1C7E91AF00CEE67F /* PlayingCardDeck.m */,
+			);
+			path = CardGame;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A893CFA91C7E693A00CEE67F /* CardGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A893CFB11C7E693A00CEE67F /* Build configuration list for PBXNativeTarget "CardGame" */;
+			buildPhases = (
+				A893CFA61C7E693A00CEE67F /* Sources */,
+				A893CFA71C7E693A00CEE67F /* Frameworks */,
+				A893CFA81C7E693A00CEE67F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardGame;
+			productName = CardGame;
+			productReference = A893CFAA1C7E693A00CEE67F /* CardGame */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A893CFA21C7E693A00CEE67F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Saad Patail";
+				TargetAttributes = {
+					A893CFA91C7E693A00CEE67F = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = A893CFA51C7E693A00CEE67F /* Build configuration list for PBXProject "CardGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A893CFA11C7E693A00CEE67F;
+			productRefGroup = A893CFAB1C7E693A00CEE67F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A893CFA91C7E693A00CEE67F /* CardGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A893CFA61C7E693A00CEE67F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A893CFBF1C7E91AF00CEE67F /* PlayingCardDeck.m in Sources */,
+				A893CFAE1C7E693A00CEE67F /* main.m in Sources */,
+				A893CFB91C7E7F1F00CEE67F /* Deck.m in Sources */,
+				A893CFBC1C7E83E200CEE67F /* PlayingCard.m in Sources */,
+				A893CFB61C7E696800CEE67F /* Card.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A893CFAF1C7E693A00CEE67F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A893CFB01C7E693A00CEE67F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A893CFB21C7E693A00CEE67F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A893CFB31C7E693A00CEE67F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A893CFA51C7E693A00CEE67F /* Build configuration list for PBXProject "CardGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A893CFAF1C7E693A00CEE67F /* Debug */,
+				A893CFB01C7E693A00CEE67F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A893CFB11C7E693A00CEE67F /* Build configuration list for PBXNativeTarget "CardGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A893CFB21C7E693A00CEE67F /* Debug */,
+				A893CFB31C7E693A00CEE67F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A893CFA21C7E693A00CEE67F /* Project object */;
+}
