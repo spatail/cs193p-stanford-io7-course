@@ -13,8 +13,10 @@
 @interface ViewController ()
 @property (strong, nonatomic) Deck *deck;
 @property (strong, nonatomic) CardMatchingGame *game;
+@property (nonatomic, getter=isStarted) BOOL started;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *matchMode;
 @end
 
 @implementation ViewController
@@ -31,7 +33,8 @@
 
 - (CardMatchingGame *)game {
     if (!_game)  _game = [[CardMatchingGame alloc] initWithCardCount:[self.cardButtons count]
-                                                           usingDeck:[self createDeck]];
+                                                           usingDeck:[self createDeck]
+                                                      withMatchLimit:self.matchMode.selectedSegmentIndex == 0 ? 2 : 3];
     return _game;
 }
 
@@ -45,6 +48,10 @@
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
+    if (!self.isStarted) {
+        self.matchMode.enabled = NO;
+        self.started = YES;
+    }
     int cardIndex = [self.cardButtons indexOfObject:sender];
     [self.game chooseCardAtIndex:cardIndex];
     [self updateUI];
@@ -61,7 +68,7 @@
         cardButton.enabled = !card.isMatched;
     }
     NSLog(@"Score: %ld", self.game.score);
-    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", self.game.score];
 }
 
 - (NSString *)titleForCard:(Card *)card {
@@ -70,6 +77,14 @@
 
 - (UIImage *)backgroundImageForCard:(Card *)card {
     return [UIImage imageNamed:card.isChosen ? @"cardfront" : @"cardback"];
+}
+
+- (IBAction)resetGame:(UIButton *)sender {
+    [self.game resetCards];
+    [self updateUI];
+    self.game = nil;
+    self.matchMode.enabled = YES;
+    self.started = NO;
 }
 
 @end
