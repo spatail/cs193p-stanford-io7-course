@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *matchMode;
+@property (weak, nonatomic) IBOutlet UILabel *matchResultLabel;
 @end
 
 @implementation ViewController
@@ -69,6 +70,7 @@
     }
     NSLog(@"Score: %ld", self.game.score);
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", self.game.score];
+    self.matchResultLabel.text = [self.game matchResult];
 }
 
 - (NSString *)titleForCard:(Card *)card {

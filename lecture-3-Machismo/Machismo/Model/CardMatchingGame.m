@@ -7,11 +7,13 @@
 //
 
 #import "CardMatchingGame.h"
+#import "LastMatchResult.h"
 
 @interface CardMatchingGame()
 @property (nonatomic, readwrite) NSInteger score;
 @property (nonatomic, strong) NSMutableArray *cards; // of Card
 @property (nonatomic, readwrite) NSInteger cardsToMatch;
+@property (nonatomic, strong) LastMatchResult *result;
 @end
 
 @implementation CardMatchingGame
@@ -25,6 +27,7 @@
     self = [self initWithCardCount:count usingDeck:deck];
     if (self) {
         self.cardsToMatch = limit;
+        self.result = [[LastMatchResult alloc] init];
     }
     return self;
 }
@@ -69,7 +72,7 @@ static const int COST_TO_CHOOSE = 1;
             for (Card *otherCard in self.cards) {
                 if (otherCard.isChosen && !otherCard.isMatched) {
                     
-                    // cache all cards until we reach the match limit
+                    // cache all chosen cards until we reach the match limit
                     [otherChosenCards addObject:otherCard];
                     if (++countOtherChosenCards < (self.cardsToMatch - 1)) {
                         continue;
@@ -91,17 +94,24 @@ static const int COST_TO_CHOOSE = 1;
                         for (Card *other in otherChosenCards) {
                             other.matched = YES;
                         }
+                        self.result.penalty = NO;
+                        self.result.score = matchScore * MATCH_BONUS;
                     } else {
                         self.score -= MISMATCHED_PENALTY;
                         for (Card *other in otherChosenCards) {
                             other.chosen = NO;
                         }
+                        self.result.penalty = YES;
+                        self.result.score = MISMATCHED_PENALTY * -1;
                     }
                     break;
                 }
             }
             self.score -= COST_TO_CHOOSE;
             card.chosen = YES;
+            
+            [otherChosenCards addObject:card];
+            self.result.cards = otherChosenCards;
         }
     }
 }
@@ -116,6 +126,11 @@ static const int COST_TO_CHOOSE = 1;
         card.chosen = NO;
     }
     self.score = 0;
+    [self.result clear];
+}
+
+- (NSString *)matchResult {
+    return [self.result contents];
 }
 
 @end

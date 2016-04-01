@@ -20,5 +20,6 @@
 - (void)chooseCardAtIndex:(NSUInteger)index;
 - (Card *)cardAtIndex:(NSUInteger)index;
 - (void)resetCards;
+- (NSString *)matchResult;
 
 @end
